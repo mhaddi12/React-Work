@@ -1,0 +1,59 @@
+/* Ensure the card has a consistent layout */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Image container to set fixed height */
+  .card-img-container {
+    height: 250px; /* Adjust this height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Image will fit inside the container without being stretched */
+  .product-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Ensures aspect ratio is maintained */
+  }
+  
+  /* Card body styles */
+  .card-body {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Title and text styles */
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Hover effect for the card */
+  .product-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Button styles */
+  .btn-block {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Custom styles for the loading text */
+  .loading-text {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
