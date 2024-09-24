@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../store.css"; // Make sure you have custom styles for the images
+import "../store.css"; 
 import useProductsStore from "../store/product";
 
 const GetProduct = () => {

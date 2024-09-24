@@ -6,14 +6,14 @@ Product detail container
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Product Image */
+
   .product-image-detail {
     border-radius: 10px;
     max-height: 500px;
     object-fit: contain;
   }
   
-  /* Product Info */
+
   .product-info {
     display: flex;
     flex-direction: column;
@@ -21,7 +21,6 @@ Product detail container
     padding: 20px;
   }
   
-  /* Product Title */
   .product-title {
     font-weight: 700;
     font-size: 2.5rem;
@@ -29,7 +28,7 @@ Product detail container
     margin-bottom: 10px;
   }
   
-  /* Product Price */
+
   .product-price {
     font-size: 1.75rem;
     color: #28a745;
@@ -51,7 +50,7 @@ Product detail container
     margin-bottom: 30px;
   }
   
-  /* Back to Store Button */
+
   .product-back-btn {
     font-size: 1.1rem;
     padding: 10px 20px;
@@ -59,7 +58,7 @@ Product detail container
     font-weight: 600;
   }
   
-  /* Hover effects */
+
   .product-back-btn:hover {
     background-color: #007bff;
     border-color: #007bff;

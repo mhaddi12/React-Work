@@ -6,7 +6,6 @@ import "../productDetail.css";
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
 
-  // Ensure `id` is a string, or handle the case where it's undefined
   if (!id) {
     return <h2 className="text-center">Product not found</h2>;
   }
