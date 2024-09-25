@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import useProductsStore from "../store/product";
+import useProductsStore from "../store/ProductStore";
 import "../productDetail.css";
 
 const ProductDetail = () => {

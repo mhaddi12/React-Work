@@ -1,4 +1,5 @@
 import {create} from 'zustand';
+import {fetchProductsApi} from '../services/product'
 
 interface Product {
   id: number;
@@ -13,7 +14,7 @@ interface ProductsStore {
   loading: boolean;
   setLoading: (loading: boolean) => void;
   products: Product[];
-  fetchProducts: () => Promise<void>; // Renamed for clarity
+  fetchProducts: () => Promise<void>;
 }
 
 const useProductsStore = create<ProductsStore>((set) => ({
@@ -29,21 +30,11 @@ const useProductsStore = create<ProductsStore>((set) => ({
       set({ products, loading: false });
     } catch (error) {
       console.error("Failed to fetch products:", error);
-      set({ loading: false }); // Ensure loading is turned off in case of failure
+      set({ loading: false });
     }
   },
 }));
 
-// Function to fetch products from API
-const fetchProductsApi = async (): Promise<Product[]> => {
-  console.log("Making API call...");
-  const res = await fetch("https://fakestoreapi.com/products/");
-  if (!res.ok) {
-    throw new Error(`Error fetching products: ${res.statusText}`);
-  }
-  const data: Product[] = await res.json();
-  console.log("API call completed.");
-  return data;
-};
+
 
 export default useProductsStore;
