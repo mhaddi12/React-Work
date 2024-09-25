@@ -1,0 +1,62 @@
+
+.homepage-container {
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: #fff;
+  }
+  
+  .content-box {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 15px;
+  }
+  
+
+  .custom-link {
+    padding: 12px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+  }
+  
+  .custom-link:hover {
+    background-color: #fff;
+    color: #4e54c8;
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  p.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

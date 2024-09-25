@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useProductsStore from "../store/ProductStore";
+import "./GetProduct.css"; // Import the custom CSS
 
 export const GetProduct = () => {
   const products = useProductsStore((state) => state.products);
@@ -18,11 +19,15 @@ export const GetProduct = () => {
               />
             </div>
             <div className="card-body">
-              <h5 className="card-title">{p.title}</h5>
-              <p className="card-text">${p.price}</p>
+              <h5 className="card-title text-truncate" title={p.title}>
+                {p.title}
+              </h5>
+              <p className="card-text font-weight-bold text-success">
+                ${p.price.toFixed(2)}
+              </p>
               <Link
                 to={`/store/dp/${p.id}`}
-                className="btn btn-primary btn-block"
+                className="btn btn-outline-primary btn-block custom-btn"
               >
                 View Details
               </Link>

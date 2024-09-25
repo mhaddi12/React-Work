@@ -8,26 +8,28 @@ const StorePage = () => {
   const loading = useProductsStore((state) => state.loading);
 
   useEffect(() => {
-    const fetchData = async () => {
-      await loadProducts();
+    loadProducts();
+
+    return () => {
+      console.log("StorePage component unmounted.");
     };
-    fetchData();
   }, [loadProducts]);
 
-  console.log("component");
+  console.log("StorePage component rendered");
 
   return (
     <div className="container">
       <h1 className="my-4 text-center">Products</h1>
-      {loading && (
-        <center>
-          <h1 className="text-center d-flex justify-content-center align-items-center">
-            Loading...
-          </h1>
-        </center>
+      {loading ? (
+        <div className="d-flex justify-content-center align-items-center vh-50">
+          <h2 className="text-center">Loading...</h2>
+        </div>
+      ) : (
+        <>
+          <hr />
+          <GetProduct />
+        </>
       )}
-      <hr />
-      <GetProduct />
     </div>
   );
 };
